@@ -1,0 +1,80 @@
+#initial section for asking name, and displaying it
+
+name = input("Hello, what is your name?   ") #asks for name
+print("\nHello,", name)
+
+#section for asking if user would like to displaying
+
+ask_to_play = input("OK, nice to meet you! Would you like to play a game?   ")
+if ask_to_play == "yes":
+  print("OK,", name, "lets play the game, and I'll tell you the rules!")
+
+  #section where rules are described
+  read_instructions = input("\nWould you like to learn the instructions?   ")
+  if read_instructions == "yes":
+    print("\n\tOK,", name, "the rules are fairly simple.")
+  print("\n\tI will give you a simple math problem, with an integer as the answer.")
+  print("\n\tI will then give you 3 multiple choice answers, and only one of them is correct.")
+  print("\n\tIf you select it incorrectly, you must start over. If you select correctly, you move on!")
+  print("\n\tBehind each number, is a hint for an animal I am thinking of!")
+  print("\n\tThere is a total of 3 hints, and then you must guess the animal I am thinking of. You have 1 guess.")
+
+  #section for first question
+  question1 = input("\nAre you ready for the first question?!   ")
+  if question1 == "yes":
+    print("\nOK,", name, "first question!")
+  print("\nWhat is 2 + 2?")
+  print("\n1. \t4  \n2. \t89  \n3. \t828")
+  answer1 = input("What do you think the answer is?   ")
+  if answer1 == "1":
+    print("Correct! You will move onto the next question but first, here is your hint!")
+  else:
+      print("Awww, so close! I'll give it to ya anyway!")
+  if answer1 == "1":
+    print("\nOK, your first hint is: \n\tIt is extremely large")
+
+  #section for second question
+
+  question2 = input("\nAre you ready for the second question?!   ")
+  if question2 == "yes":
+    print("\nOK,", name, "second question!")
+  print("\nWhat is 6 x 6?")
+  print("\n1. \t12  \n2. \t0  \n3. \t36")
+  answer2 = input("What do you think the answer is?   ")
+  if answer2 == "3":
+    print("Correct! You will move onto the next question but first, here is your hint!")
+  else:
+      print("Awww, so close! I'll give it to ya anyway! The answer was 3. 36.")
+  if answer2 == "3":
+      print("\nOK, your second hint is: \n\tThe only place it is found in the wild is in the continent of Africa")
+
+  #section for third question
+
+  question3 = input("\nAre you ready for the third question?!   ")
+  print("\nOK,", name, "third question")
+  print("\nWhat is 9 x 6?")
+  print("\n1. \t54  \n2. \t13  \n3. \t57")
+  answer3 = input("What do you think the answer is?   ")
+  if answer3 == "1":
+    print("Correct! You will move onto your chance to guess the animal, but first, here is your final hint!")
+  else:
+      print("Awww, so close! I'll give it to ya anyway! The answer was 1. 54.")
+  print("\nOK, your third and final hint is: \n\tIt drinks water by using a long trunk attached to its body")
+
+  #section for guessing animal
+
+  final_question = input("\nAre you ready for the final question?!   ")
+  if final_question == "yes":
+    print("\nVery impressive, you made it to the final part of this game where you guess the animal!")
+  print("\nOK,", name, ",the final question")
+  print("\nWhat is the animal the hints were leading to?")
+  print("\n1. \tElephant  \n2. \tTiger  \n3. \tDog")
+  animal_answer = input("What do you think the answer is?   ")
+  if animal_answer == "1":
+    print("\nCorrect! You have beaten the game! CONGRAGULATIONS!")
+  else:
+    print("Awww, so close! I'll give it to ya anyway! 1. Elephant was the correct answer.")
+  print("\n\tThanks for playing!")
+
+else:
+  print("OK, if you want to come back again later and play, just say 'yes' next time", name)
